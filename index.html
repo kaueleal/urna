@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' href='style.css'>
+</head>
+<body>
+    <div id="fundo">
+        <div id="tela">
+            <div id="tela2">
+                <p>SEU VOTO PARA</p><br>
+                <h2 id="cargo">PREFEITO</h2>
+                <div id="foto"></div>
+                <p style="margin-bottom: -70px; margin-top: 60px;">Número: </p>
+                <div id="numero">
+                    <div class="campo1"><p id="num1"></p></div>
+                    <div class="campo2"><p id="num2"></p></div>               
+                </div><br>
+                <p id="nome"></p>
+                <p id="partido"></p>
+                <p id="vice"></p>             
+            </div>
+        </div>
+        <div id="botoes">
+            <div id="texto"><h2 style="margin-left: 160px;">URNA</h2> <h2>ELEITORAL</h2></div>
+            <div id="espace">
+                <div id="btn">
+                    <input type="submit" class="btn" value="1" onclick="btn1()"></input>
+                    <input type="submit" class="btn" value="2" onclick="btn2()"></input>
+                    <input type="submit" class="btn" value="3" onclick="btn3()"></input>
+                    <input type="submit" class="btn" value="4" onclick="btn4()"></input>
+                    <input type="submit" class="btn" value="5" onclick="btn5()"></input>
+                    <input type="submit" class="btn" value="6" onclick="btn6()"></input>
+                    <input type="submit" class="btn" value="7" onclick="btn7()"></input>
+                    <input type="submit" class="btn" value="8" onclick="btn8()"></input>
+                    <input type="submit" class="btn" value="9" onclick="btn9()"></input>
+                </div>
+                <input type="submit" value="0" class="btn" onclick="btn0()" style="margin-left: 85px;"></input>
+            </div>
+            <div class="btnfim">
+                <button id="btnfim" onclick="branco()" style="background-color: white;">BRANCO</button>
+                <button id="btnfim" onclick="corrige()" style="background-color: red;">CORRIGE</button>
+                <button id="btnfim" onclick="confirma()" style="background-color: green;">CONFIRMA</button>
+            </div>
+        </div>
+    </div>
+    <script src='script.js'></script>    
+</body>
+</html>
