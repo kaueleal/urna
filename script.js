@@ -11,6 +11,8 @@ let resnum1 = ''
 let res2 = document.querySelector('p#num2')
 let resnum2 = ''
 let branc = 0
+let audioc = new Audio('audio/audiou.mp3')
+let audiot = new Audio('audio/audiot.mp3')
 let candidato = [{
     "nome": "Carlão Gomes",
     "vice": "Getúlio Gomes",
@@ -43,7 +45,8 @@ function btn0(){
         resnum2 = '0'
         name.innerHTML = '<b>NÚMERO ERRADO</b>'
         vice.innerHTML = '<h1>VOTO NULO</h1>'
-    }     
+    }
+    audiot.play()
 }
 function btn1() {
     if(n1 == 0){
@@ -59,6 +62,7 @@ function btn1() {
         name.innerHTML = '<b>NÚMERO ERRADO</b>'
         vice.innerHTML = '<h1>VOTO NULO</h1>'
     }
+    audiot.play()
 }
 function btn2() {
     if(n1 == 0){
@@ -74,6 +78,7 @@ function btn2() {
         name.innerHTML = '<b>NÚMERO ERRADO</b>'
         vice.innerHTML = '<h1>VOTO NULO</h1>'
     }
+    audiot.play()
 }
 function btn3() {
     if(n1 == 0){
@@ -89,6 +94,7 @@ function btn3() {
         name.innerHTML = '<b>NÚMERO ERRADO</b>'
         vice.innerHTML = '<h1>VOTO NULO</h1>'
     }
+    audiot.play()
 }
 function btn4() {
     if(n1 == 0){
@@ -104,6 +110,7 @@ function btn4() {
         name.innerHTML = '<b>NÚMERO ERRADO</b>'
         vice.innerHTML = '<h1>VOTO NULO</h1>'
     }
+    audiot.play()
 }
 function btn5() {
     if(n1 == 0){
@@ -132,6 +139,7 @@ function btn5() {
             vice.innerHTML = '<h1>VOTO NULO</h1>'            
         }
     }
+    audiot.play()
 }
 function btn6() {
     if(n1 == 0){
@@ -147,6 +155,7 @@ function btn6() {
         name.innerHTML = '<b>NÚMERO ERRADO</b>'
         vice.innerHTML = '<h1>VOTO NULO</h1>'
     }
+    audiot.play()
 }
 function btn7() {
     if(n1 == 0){
@@ -162,6 +171,7 @@ function btn7() {
         name.innerHTML = '<b>NÚMERO ERRADO</b>'
         vice.innerHTML = '<h1>VOTO NULO</h1>'
     }
+    audiot.play()
 }
 function btn8() {
     if(n1 == 0){
@@ -189,6 +199,7 @@ function btn8() {
             name.innerHTML = '<b>NÚMERO ERRADO</b>'
             vice.innerHTML = '<h1>VOTO NULO</h1>'            
         }
+        audiot.play()
     }
 }
 function btn9() {
@@ -205,9 +216,11 @@ function btn9() {
         name.innerHTML = '<b>NÚMERO ERRADO</b>'
         vice.innerHTML = '<h1>VOTO NULO</h1>'
     }
+    audiot.play()
 }
 
 function corrige() {
+    audiot.play()
     res1.innerHTML = ''
     resnum1 = ''
     res2.innerHTML = ''
@@ -224,6 +237,7 @@ function corrige() {
     }
 }
 function branco() {
+    audiot.play()
     if(branc == 0){
         let white = 0
         corrige()
@@ -253,5 +267,6 @@ function confirma(){
         let tela2 = document.querySelector('div#tela2')
         tela2.innerHTML = '<h1 id="fim">FIM</h1>'
         final.innerHTML = ''
+        audioc.play()
     }
 }
