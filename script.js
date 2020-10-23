@@ -179,7 +179,7 @@ function btn8() {
             part.innerHTML = `<b>Partido:</b> ${candidato[0].partido}`
             vice.innerHTML = `<b>Vice:</b> ${candidato[0].vice}`
             foto.innerHTML = `<div id="cand">${candidato[0].foto}PREFEITO</div>`
-            foto2.innerHTML = `<div id="vice-cand">${candidato[0].foto2}VICE-PREFEITA</div>`
+            foto2.innerHTML = `<div id="vice-cand">${candidato[0].foto2}VICE-PREFEITO</div>`
             final.innerHTML = `<hr id="hr">`
             final.innerHTML += `<h3 id="final">Aperte a tecla:</h3><br>`
             final.innerHTML += `<h4 id="final">VERDE para CONFIRMAR o voto</h4>`
