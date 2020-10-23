@@ -37,6 +37,8 @@ function btn0(){
         res2.innerHTML = '<p id="txt">0</p>'
         n1++
         resnum2 = '0'
+        name.innerHTML = '<b>NÚMERO ERRADO</b>'
+        vice.innerHTML = '<h1>VOTO NULO</h1>'
     }     
 }
 function btn1() {
@@ -49,6 +51,8 @@ function btn1() {
         res2.innerHTML = '<p id="txt">1</p>'
         n1++
         resnum2 = '1'
+        name.innerHTML = '<b>NÚMERO ERRADO</b>'
+        vice.innerHTML = '<h1>VOTO NULO</h1>'
     }
 }
 function btn2() {
@@ -61,6 +65,8 @@ function btn2() {
         res2.innerHTML = '<p id="txt">2</p>'
         n1++
         resnum2 = '2'
+        name.innerHTML = '<b>NÚMERO ERRADO</b>'
+        vice.innerHTML = '<h1>VOTO NULO</h1>'
     }
 }
 function btn3() {
@@ -73,6 +79,8 @@ function btn3() {
         res2.innerHTML = '<p id="txt">3</p>'
         n1++
         resnum2 = '3'
+        name.innerHTML = '<b>NÚMERO ERRADO</b>'
+        vice.innerHTML = '<h1>VOTO NULO</h1>'
     }
 }
 function btn4() {
@@ -85,6 +93,8 @@ function btn4() {
         res2.innerHTML = '<p id="txt">4</p>'
         n1++
         resnum2 = '4'
+        name.innerHTML = '<b>NÚMERO ERRADO</b>'
+        vice.innerHTML = '<h1>VOTO NULO</h1>'
     }
 }
 function btn5() {
@@ -97,7 +107,7 @@ function btn5() {
         res2.innerHTML = '<p id="txt">5</p>'
         n1++
         resnum2 = '5'
-        if(resnum1 == candidato[1].num1 && resnum2 == candidato[1].num2){
+        if(resnum1 == candidato[1].num1 && resnum2 == candidato[1].num2){ //eu sei que não precisa do if mas eu não tirei por certos motivos...
             name.innerHTML = `<b>Nome: ${candidato[1].nome}</b>`
             part.innerHTML = `<b>Partido: ${candidato[1].partido}</b>`
             vice.innerHTML = `<b>Vice: ${candidato[1].vice}</b>`
@@ -120,6 +130,8 @@ function btn6() {
         res2.innerHTML = '<p id="txt">6</p>'
         n1++
         resnum2 = '6'
+        name.innerHTML = '<b>NÚMERO ERRADO</b>'
+        vice.innerHTML = '<h1>VOTO NULO</h1>'
     }
 }
 function btn7() {
@@ -132,6 +144,8 @@ function btn7() {
         res2.innerHTML = '<p id="txt">7</p>'
         n1++
         resnum2 = '7'
+        name.innerHTML = '<b>NÚMERO ERRADO</b>'
+        vice.innerHTML = '<h1>VOTO NULO</h1>'
     }
 }
 function btn8() {
@@ -165,6 +179,8 @@ function btn9() {
         res2.innerHTML = '<p id="txt">9</p>'
         n1++
         resnum2 = '9'
+        name.innerHTML = '<b>NÚMERO ERRADO</b>'
+        vice.innerHTML = '<h1>VOTO NULO</h1>'
     }
 }
 
