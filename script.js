@@ -2,6 +2,9 @@ let btn = document.querySelector('div#btn')
 let name = document.querySelector('p#nome')
 let part = document.querySelector('p#partido')
 let vice = document.querySelector('p#vice')
+let foto = document.querySelector('div#foto')
+let foto2 = document.querySelector('div#foto-vice')
+let final = document.querySelector('div#tela3')
 let res1 = document.querySelector('p#num1')
 let n1 = 0
 let resnum1 = ''
@@ -16,12 +19,13 @@ let candidato = [{
 },
 {
     "nome": "João Sena",
-    "vice": "Flávia Rueda",
+    "vice": "Luciana Lóssio",
     "num1": "5",
     "num2": "5",
-    "partido": "WWE"
+    "partido": "WWE",
+    "foto": '<img id="foton" src="img/johncena.jpg" />',
+    "foto2": '<img id="foto-vice" src="img/luciana.jpeg" />'
 }]
-
 
 function btn0(){
     if(n1 == 0){
@@ -94,9 +98,15 @@ function btn5() {
         n1++
         resnum2 = '5'
         if(resnum1 == candidato[1].num1 && resnum2 == candidato[1].num2){
-            name.innerHTML = `${candidato[1].nome}`
-            part.innerHTML = `${candidato[1].partido}`
-            vice.innerHTML = `${candidato[1].vice}`
+            name.innerHTML = `<b>Nome: ${candidato[1].nome}</b>`
+            part.innerHTML = `<b>Partido: ${candidato[1].partido}</b>`
+            vice.innerHTML = `<b>Vice: ${candidato[1].vice}</b>`
+            foto.innerHTML = `<div id="cand">${candidato[1].foto}PREFEITO</div>`
+            foto2.innerHTML = `<div id="vice-cand">${candidato[1].foto2}VICE-PREFEITA</div>`
+            final.innerHTML = `<hr id="hr">`
+            final.innerHTML += `<h3 id="final">Aperte a tecla:</h3><br>`
+            final.innerHTML += `<h4 id="final">VERDE para CONFIRMAR o voto</h4>`
+            final.innerHTML += `<h4 id="final">VERMELHA para REINICIAR o voto</h4>`
         }
     }
 }
@@ -135,9 +145,13 @@ function btn8() {
         n1++
         resnum2 = '8'
         if(resnum1 == candidato[0].num1 && resnum2 == candidato[0].num2){
-            name.innerHTML = `${candidato[0].nome}`
-            part.innerHTML = `${candidato[0].partido}`
-            vice.innerHTML = `${candidato[0].vice}`
+            name.innerHTML = `<b>Nome:</b> ${candidato[0].nome}`
+            part.innerHTML = `<b>Partido:</b> ${candidato[0].partido}`
+            vice.innerHTML = `<b>Vice:</b> ${candidato[0].vice}`
+            final.innerHTML = `<hr id="hr">`
+            final.innerHTML += `<h3 id="final">Aperte a tecla:</h3><br>`
+            final.innerHTML += `<h4 id="final">VERDE para CONFIRMAR o voto</h4>`
+            final.innerHTML += `<h4 id="final">VERMELHA para REINICIAR o voto</h4>`
         }
     }
 }
@@ -160,9 +174,16 @@ function corrige() {
     name.innerHTML = '<p></p>'
     part.innerHTML = '<p></p>'
     vice.innerHTML = '<p></p>'
+    foto.innerHTML = ''
+    foto2.innerHTML = ''
+    final.innerHTML = ''
     n1 = n1 - 2
+}
+function branco() {
+    vice.innerHTML = '<h1>VOTO EM BRANCO</h1>'
 }
 function confirma(){
     let tela2 = document.querySelector('div#tela2')
-    tela2.innerHTML = '<h1>FIM</h1>'
+    tela2.innerHTML = '<h1 id="fim">FIM</h1>'
+    final.innerHTML = ''
 }

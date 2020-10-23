@@ -6,14 +6,14 @@ body{
     margin: auto;
     height: 600px;
     width: 1200px;
-    background-color: #D3D3D3;
+    background-color: #dcd6ca;
     padding-top: 50px;
 }
 #tela{
     margin-left: 50px;
     width: 600px;
     height: 500px;
-    background-color: #C0C0C0;
+    background-color: #d0d0d0;
     border: 5px solid black;
 }
 #botoes{
@@ -22,7 +22,7 @@ body{
     margin-right: 50px;
     width: 400px;
     height: 500px;
-    background-color: #1C1C1C;    
+    background-color: #474141;    
 }
 #espace{
     padding-top: 50px;
@@ -75,14 +75,48 @@ p{
     margin-top: -64px;
     margin-left: 60px;
 }
+#cand{
+    width: 204px;
+    background-color: white;
+    text-align: center;
+}
+#vice-cand{
+    margin-top: -108px;
+    margin-left: -5px;
+    width: 154px;
+    height: 172px;
+    background-color: white;
+    text-align: center;    
+}
 #foto{
-    margin-top: -70px;
-    background-color: red;
+    margin-top: -64px;
+    margin-right: 8px;
     float: right;
     width: 200px;
     height: 200px;
 }
+#foto-vice{
+    margin-right: 2px;
+    margin-top: 2px;
+    float: right;
+    width: 150px;
+    height: 150px;
+}
+#foton{
+    float: right;
+    width: 200px;
+    height: 200px;
+    border: 2px solid white;  
+}
 #txt{
     font-size: 36px;
     margin-left: 5px;
+}
+#hr{
+    height: 2px;
+    background-color: black;
+    margin-top: 50px;
+}
+#final{
+    padding: 3px;
 }
