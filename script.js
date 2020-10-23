@@ -10,6 +10,7 @@ let n1 = 0
 let resnum1 = ''
 let res2 = document.querySelector('p#num2')
 let resnum2 = ''
+let branc = 0
 let candidato = [{
     "nome": "Carlão Gomes",
     "vice": "Getúlio Gomes",
@@ -32,6 +33,7 @@ function btn0(){
         res1.innerHTML = '<p id="txt">0</p>'
         n1++
         resnum1 = '0'
+        branc++
     }
     else if (n1 == 1){
         res2.innerHTML = '<p id="txt">0</p>'
@@ -46,6 +48,7 @@ function btn1() {
         res1.innerHTML = '<p id="txt">1</p>'
         n1++
         resnum1 = '1'
+        branc++
     }
     else if (n1 == 1){
         res2.innerHTML = '<p id="txt">1</p>'
@@ -60,6 +63,7 @@ function btn2() {
         res1.innerHTML = '<p id="txt">2</p>'
         n1++
         resnum1 = '2'
+        branc++
     }
     else if (n1 == 1){
         res2.innerHTML = '<p id="txt">2</p>'
@@ -74,6 +78,7 @@ function btn3() {
         res1.innerHTML = '<p id="txt">3</p>'
         n1++
         resnum1 = '3'
+        branc++
     }
     else if (n1 == 1){
         res2.innerHTML = '<p id="txt">3</p>'
@@ -88,6 +93,7 @@ function btn4() {
         res1.innerHTML = '<p id="txt">4</p>'
         n1++
         resnum1 = '4'
+        branc++
     }
     else if (n1 == 1){
         res2.innerHTML = '<p id="txt">4</p>'
@@ -102,6 +108,7 @@ function btn5() {
         res1.innerHTML = '<p id="txt">5</p>'
         n1++
         resnum1 = '5'
+        branc++
     }
     else if (n1 == 1){
         res2.innerHTML = '<p id="txt">5</p>'
@@ -118,6 +125,10 @@ function btn5() {
             final.innerHTML += `<h4 id="final">VERDE para CONFIRMAR o voto</h4>`
             final.innerHTML += `<h4 id="final">VERMELHA para REINICIAR o voto</h4>`
         }
+        else{
+            name.innerHTML = '<b>NÚMERO ERRADO</b>'
+            vice.innerHTML = '<h1>VOTO NULO</h1>'            
+        }
     }
 }
 function btn6() {
@@ -125,6 +136,7 @@ function btn6() {
         res1.innerHTML = '<p id="txt">6</p>'
         n1++
         resnum1 = '6'
+        branc++
     }
     else if (n1 == 1){
         res2.innerHTML = '<p id="txt">6</p>'
@@ -139,6 +151,7 @@ function btn7() {
         res1.innerHTML = '<p id="txt">7</p>'
         n1++
         resnum1 = '7'
+        branc++
     }
     else if (n1 == 1){
         res2.innerHTML = '<p id="txt">7</p>'
@@ -153,6 +166,7 @@ function btn8() {
         res1.innerHTML = '<p id="txt">8</p>'
         n1++
         resnum1 = '8'
+        branc++
     }
     else if (n1 == 1){
         res2.innerHTML = '<p id="txt">8</p>'
@@ -167,6 +181,10 @@ function btn8() {
             final.innerHTML += `<h4 id="final">VERDE para CONFIRMAR o voto</h4>`
             final.innerHTML += `<h4 id="final">VERMELHA para REINICIAR o voto</h4>`
         }
+        else{
+            name.innerHTML = '<b>NÚMERO ERRADO</b>'
+            vice.innerHTML = '<h1>VOTO NULO</h1>'            
+        }
     }
 }
 function btn9() {
@@ -174,6 +192,7 @@ function btn9() {
         res1.innerHTML = '<p id="txt">9</p>'
         n1++
         resnum1 = '9'
+        branc++
     }
     else if (n1 == 1){
         res2.innerHTML = '<p id="txt">9</p>'
@@ -185,21 +204,50 @@ function btn9() {
 }
 
 function corrige() {
-    res1.innerHTML = '<p></p>'
-    res2.innerHTML = '<p></p>'
-    name.innerHTML = '<p></p>'
-    part.innerHTML = '<p></p>'
-    vice.innerHTML = '<p></p>'
+    res1.innerHTML = ''
+    resnum1 = ''
+    res2.innerHTML = ''
+    resnum2 = ''
+    name.innerHTML = ''
+    part.innerHTML = ''
+    vice.innerHTML = ''
     foto.innerHTML = ''
     foto2.innerHTML = ''
     final.innerHTML = ''
-    n1 = n1 - 2
+    n1 = 0
+    if(branc > 0){
+        branc--
+    }
 }
 function branco() {
-    vice.innerHTML = '<h1>VOTO EM BRANCO</h1>'
+    if(branc == 0){
+        let white = 0
+        corrige()
+        resnum1 = 'branco'
+        resnum2 = 'branco'
+        part.innerHTML = '<h1 style="margin-left: 150px;">VOTO EM BRANCO</h1>'
+        white++
+        if(white > 0){
+            n1 = 100
+        }        
+    }
+    else{
+
+    }
 }
 function confirma(){
-    let tela2 = document.querySelector('div#tela2')
-    tela2.innerHTML = '<h1 id="fim">FIM</h1>'
-    final.innerHTML = ''
+    // if(branco() == true){
+    //     let tela2 = document.querySelector('div#tela2')
+    //     tela2.innerHTML = '<h1 id="fim">FIM</h1>'
+    //     final.innerHTML = ''        
+    // }
+    // else 
+    if(resnum1 == '' || resnum2 == ''){
+    //assim ele fica sem fazer qualquer ação até que todos os campos sejam preenchidos
+    }
+    else{
+        let tela2 = document.querySelector('div#tela2')
+        tela2.innerHTML = '<h1 id="fim">FIM</h1>'
+        final.innerHTML = ''
+    }
 }
