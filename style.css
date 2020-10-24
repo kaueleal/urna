@@ -5,13 +5,13 @@ body{
 #fundo{
     margin: auto;
     height: 600px;
-    width: 1200px;
+    width: 1400px;
     background-color: #dcd6ca;
     padding-top: 50px;
 }
 #tela{
     margin-left: 50px;
-    width: 600px;
+    width: 800px;
     height: 500px;
     background-color: #d0d0d0;
     border: 5px solid black;
@@ -66,7 +66,7 @@ p{
     height: 64px;;
     width: 26%;
 }
-.campo1, .campo2{
+.campo1, .campo2, .campo3, .campo4, .campo5{
     width: 50px;
     height: 60px;
     border: 2px solid black;
@@ -75,6 +75,18 @@ p{
     margin-top: -64px;
     margin-left: 60px;
 }
+.campo3{
+    margin-top: -64px;
+    margin-left: 120px;
+}
+.campo4{
+    margin-top: -64px;
+    margin-left: 180px;
+}
+.campo5{
+    margin-top: -64px;
+    margin-left: 240px;
+}
 #cand{
     width: 204px;
     background-color: white;
@@ -82,7 +94,7 @@ p{
 }
 #vice-cand{
     margin-top: -108px;
-    margin-left: -5px;
+    margin-left: 716px;
     width: 154px;
     height: 172px;
     background-color: white;
@@ -96,11 +108,11 @@ p{
     height: 200px;
 }
 #foto-vice{
-    margin-right: 2px;
+    margin-left: -74px;
     margin-top: 2px;
-    float: right;
     width: 150px;
     height: 150px;
+    position: absolute;
 }
 #foton{
     float: right;
